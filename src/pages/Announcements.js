@@ -17,10 +17,9 @@ function Announcements() {
   if (loading) {
     return <div>กำลังโหลดข้อมูล...</div>;
   }
-
   return (
     <div className="announcement-list">
-      <h2>📢 ประกาศทั้งหมดของสถานีอนามัย</h2>
+      <h2>📢 ประกาศทั้งหมดของสถานีอนามัยกุดน้ำใส</h2>
       {announcements
         // เรียงตามวันที่ล่าสุด
         .sort((a, b) => new Date(b.date) - new Date(a.date)) 
