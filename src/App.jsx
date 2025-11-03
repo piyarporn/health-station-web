@@ -21,21 +21,32 @@ const Header = () => {
 
   return (
     <header className="py-4 shadow-md sticky top-0 z-30" style={gradientStyle}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        {/* แก้ไข: เพิ่ม text-white และ Text Shadow เพื่อให้ข้อความเรืองแสง (ตามคำขอเดิม) */}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        
+        {/* 🟢 ส่วนที่แก้ไข: เพิ่ม Logo และจัดเรียงด้วย Flexbox (flex, items-center, gap-2) */}
         <div className="
-          text-lg font-bold 
-          text-gray-700
+            text-xl font-bold 
+            text-gray-700
+            flex items-center space-x-10 gap-10  /* ⬅️ เพิ่ม Flexbox เพื่อจัดเรียงโลโก้และข้อความ */
         ">
-          โรงพยาบาลส่งเสริมสุขภาพตำบลกุดน้ำใส
+            
+            {/* 🟢 เพิ่มแท็ก Image/img สำหรับโลโก้ */}
+            <img 
+                src="/moph-logo.png"  /* ➡️ ตรวจสอบชื่อไฟล์ให้ถูกต้อง */
+                alt="Logo MOPH" 
+                className="h-24 w-auto" /* ➡️ ปรับขนาดโลโก้ตามต้องการ (h-8 คือสูง 2rem) */
+            />
+            
+            โรงพยาบาลส่งเสริมสุขภาพตำบลกุดน้ำใส
         </div>
+        
         <nav className="flex space-x-4">
-          <NavItem icon={Home} label="หน้าหลัก" />
-          <NavItem icon={Newspaper} label="ประกาศ/ข่าว" />
-          <NavItem icon={Info} label="เกี่ยวกับเรา" />
+            <NavItem icon={Home} label="หน้าหลัก" />
+            <NavItem icon={Newspaper} label="ประกาศ/ข่าว" />
+            <NavItem icon={Info} label="เกี่ยวกับเรา" />
         </nav>
-      </div>
-    </header>
+    </div>
+</header>
   );
 };
 

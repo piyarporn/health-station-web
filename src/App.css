@@ -172,3 +172,16 @@ body {
 .footer p {
     margin: 5px 0;
 }
+
+.hospital-name {
+    display: flex; /* จัดเรียงองค์ประกอบย่อยให้อยู่ในแถวเดียวกัน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 10px; /* เว้นระยะห่างระหว่างโลโก้กับข้อความ */
+    font-size: 1.2em; /* ปรับขนาดตัวอักษร */
+    font-weight: bold;
+}
+
+.moph-logo {
+    height: 40px; /* ปรับขนาดโลโก้ตามต้องการ */
+    width: auto;
+}

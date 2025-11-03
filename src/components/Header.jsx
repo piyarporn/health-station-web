@@ -8,7 +8,12 @@ const Header = () => {
     return (
         <header className="header">
             <div className="nav-container">
-                <div className="hospital-name">
+                <div className="hospital-name flex items-center gap-3">
+                <img 
+                src="/moph-logo.png" 
+                alt="Logo MOPH"
+                className="moph-logo"
+            />
                     โรงพยาบาลส่งเสริมสุขภาพตำบลกุดน้ำใส
                 </div>
                 
