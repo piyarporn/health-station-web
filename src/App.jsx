@@ -1,8 +1,7 @@
 import React from 'react';
 import { Home, Newspaper, Info } from 'lucide-react'; 
 
-// *แก้ไข #1: เปลี่ยน Path รูปภาพไปใช้ Illustration ที่มีสัดส่วนแนวนอนคล้ายภาพตัวอย่าง*
-const hospitalIllustrationPath = './src/assets/health.png'; 
+
 
 // Component สำหรับปุ่มเมนู
 const NavItem = ({ icon: Icon, label }) => (
@@ -44,15 +43,14 @@ const Header = () => {
 // Component สำหรับแสดงรูปภาพ Hospital Illustration
 // =======================================================================
 const HospitalIllustration = () => (
-    <div className="illustration w-full h-full flex items-center justify-center overflow-hidden rounded-xl ">
-        <img 
-            src={hospitalIllustrationPath} 
-            alt="Hospital Illustration" 
-            className="w-full h-full object-cover" 
-            style={{ display: 'block' }} 
-            onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/81C784/FFFFFF?text=Hospital+Illustration"; }}
-        />
-    </div>
+   <div className="illustration w-full h-full flex items-center justify-center overflow-hidden rounded-xl ">
+    <img 
+        src={'/health.png'} 
+        alt="health.png" 
+        className="w-full h-full object-cover" 
+        style={{ display: 'block' }} 
+    />
+</div>
 );
 
 
@@ -106,7 +104,14 @@ const HeroSection = () => (
 
     {/* ฝั่งขวา: รูปภาพประกอบ */}
     <div className="lg:w-1/2 w-full h-full flex items-stretch justify-center p-4"> 
-      <HospitalIllustration />
+     <div className="illustration w-full h-full flex items-center justify-center overflow-hidden rounded-xl ">
+    <img 
+        src={'/health.png'} 
+        alt="health" 
+        className="w-full h-full object-cover" 
+        style={{ display: 'block' }} 
+    />
+</div>
     </div>
   </div>
 );
