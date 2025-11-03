@@ -1,0 +1,64 @@
+/* Header.css */
+
+/* สีและฟอนต์พื้นฐานที่ใช้ใน Header */
+:root {
+    --primary-color: #4AC0D8; /* สีฟ้าหลัก */
+    /* --text-dark: #333;
+    --text-light: #666; */
+        --text-dark: white;
+    --text-light: white;
+}
+
+.header {
+    background-color: white;
+    /* ในรูป Header ไม่มีเงาชัดเจน แต่เราใช้เส้นขอบบางๆ เพื่อแยก */
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.hospital-name {
+    /* ซ่อนชื่อโรงพยาบาลใน Header เพื่อให้เหลือเพียง Icon และ Menu ตามแนวทางของรูป */
+    display: none; 
+}
+
+.nav-links {
+    display: flex;
+    margin-left: auto; /* ชิดขวา */
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 10px 18px; /* เพิ่ม padding เพื่อให้มีพื้นที่รอบข้อความ */
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+    font-size: 16px;
+    font-weight: 500; /* น้ำหนักฟอนต์ปานกลาง */
+}
+
+.nav-links a svg {
+    margin-right: 5px; /* เว้นระยะห่างระหว่าง Icon กับข้อความ */
+    color: var(--primary-color); /* ให้ Icon เป็นสีฟ้า */
+}
+
+/* สถานะที่ถูกเลือก (หน้าหลัก ในรูป) */
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+    /* ในรูป ไม่มีขีดเส้นใต้ แต่ใช้สี Icon และข้อความที่ชัดเจน */
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}

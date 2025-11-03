@@ -1,0 +1,25 @@
+/* Footer.css */
+
+.footer {
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #eee;
+    padding: 24px 0 24px 0; /* เพิ่ม padding ด้านล่างให้มีพื้นที่มากขึ้น */
+    text-align: center;
+    font-size: 14px;
+    color: #888; /* สีข้อความที่จางกว่าเพื่อความสวยงาม */
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.footer p {
+    margin: p0x 0;
+}

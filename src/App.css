@@ -1,42 +1,174 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* src/App.css */
+body {
+    margin: 0;
+    /* เปลี่ยนบรรทัดนี้: */
+    font-family:  'Sarabun';
+    background-color: #f7f7f7;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.hospital-name-highlight {
+    /* ส่วนเน้นชื่อ รพ.สต. อาจต้องการ font-weight พิเศษ */
+    font-size: 48px;
+    font-weight: 800; /* เน้นความหนา */
+    color: #8A2BE2; 
+    display: block;
+    margin-top: 5px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --- ตัวแปรและ Reset --- */
+:root {
+    --primary-color: #4AC0D8; /* สีฟ้าหลัก */
+    --secondary-color: #E6F7FF; /* สีฟ้าอ่อน/พื้นหลังอ่อน */
+    --text-dark: #333;
+    --text-light: #666;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* แนะนำให้ใช้ font-family ที่มีลักษณะคล้ายตัวอย่าง */
+    background-color: #f7f7f7;
 }
 
-.card {
-  padding: 2em;
+/* --- Header Component --- */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.read-the-docs {
-  color: #888;
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.hospital-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+}
+
+/* --- Hero Component (ส่วนต้อนรับ) --- */
+.hero-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.hospital-name-highlight {
+    font-size: 48px;
+    font-weight: 800;
+    color: #8A2BE2; /* สีม่วงเข้ม ตามรูป */
+    display: block;
+    margin-top: 5px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #6A5ACD; /* สีม่วงปานกลาง ตามรูป */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #5849b8;
+}
+
+/* ภาพประกอบสถานพยาบาล */
+.illustration {
+    width: 90%;
+    height: auto;
+    /* ในโค้ดจริง คุณต้องใช้แท็ก <img /> ที่มี src เป็นภาพนั้นๆ */
+    /* หรือใช้ภาพ Vector ที่สร้างขึ้นมา */
+    background-color: #f0f0f0; /* placeholder */
+    min-height: 350px;
+    border-radius: 10px;
+}
+
+/* ลวดลายตกแต่งด้านล่าง */
+.botanical-pattern {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 350px;
+    height: 300px;
+    background: url(''); /* แทนที่ด้วยภาพจริง */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* --- Footer Component --- */
+.footer {
+    border-top: 1px solid #eee;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.footer p {
+    margin: 5px 0;
 }
