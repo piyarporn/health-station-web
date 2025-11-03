@@ -7,7 +7,7 @@ const NavItem = ({ icon: Icon, label, onClick }) => (
   <a 
     href="#" 
     className="
-      flex items-center text-white hover:text-blue-500 font-medium 
+      flex items-center text-white-200 hover:text-blue-500 font-medium 
       p-2 rounded-md transition duration-150 ease-in-out
       lg:mx-3 lg:p-0
     "
@@ -59,7 +59,7 @@ const Header = () => {
         
         {/* 🟢 ส่วน Mobile Hamburger Icon - แสดงบนจอเล็กเท่านั้น */}
         <button 
-          className="lg:hidden p-2 text-white hover:text-blue-600"
+          className="lg:hidden p-2 text-gray-200 hover:text-blue-600"
           onClick={toggleMenu}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
@@ -147,7 +147,6 @@ const HeroSection = () => (
     <div className="
       lg:w-1/2 w-full h-full 
       flex items-stretch justify-center p-4 
-      hidden sm:flex /* 🟢 แสดงเฉพาะบน sm ขึ้นไป */
     "> 
       <div className="illustration w-full h-full flex items-center justify-center overflow-hidden rounded-xl">
         <img 
